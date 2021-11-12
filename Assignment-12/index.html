@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Binding With KnockOut JS</title>
+    <script src="js/knockout.3.5.1.js"></script>
+</head>
+<body>
+
+    <div>
+        <label for="hobby">Enter your hobby</label>
+        <input type="text" data-bind='value : myHobby'>
+    </div>
+    <div>
+        Hobby:<span data-bind="text : myHobby" ></span>
+    </div>
+
+
+    <script>
+        const Hobby={
+            myHobby:ko.observable()
+        }
+        ko.applyBindings(Hobby)
+    </script>
+</body>
+</html>
