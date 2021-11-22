@@ -56,10 +56,12 @@
                 let firstName = $('#firstName').val();
                 if(firstName.length == ""){
                     $("#alert-f").css("display" , "block").html("This field is required");
+                    $("#firstName").css("border","2px solid red")
                     firstNameError=false;
                 }
                 else{
                     $("#alert-f").css("display" , "none");
+                    $("#firstName").css("border","2px solid green")
                     firstNameError=true;
                 }
             }
